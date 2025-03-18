@@ -18,6 +18,6 @@ export default class Cl_vivere extends Cl_articulo {
         }
     }
     totalPagar(){
-        return this.precio - this.descuentoBasico();
+        return (this.precio*this.incremento()) - this.descuentoBasico();
     }
 }

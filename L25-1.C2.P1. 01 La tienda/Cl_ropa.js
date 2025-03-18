@@ -16,7 +16,7 @@ export default class Cl_ropa extends Cl_articulo {
         }
     }
     precioFinal(){
-        return this.precio - this.descuentoRojo();        
+        return (this.precio*this.incremento()) - this.descuentoRojo();        
     }
     
 }
