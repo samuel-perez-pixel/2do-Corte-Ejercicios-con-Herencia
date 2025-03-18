@@ -1,8 +1,8 @@
 import Cl_articulo from './Cl_articulo.js'; 
 
 export default class Cl_ropa extends Cl_articulo {
-    constructor( nombre, precio,color) {
-        super( nombre, precio);
+    constructor( tipo,nombre, precio,color) {
+        super(tipo, nombre, precio);
         this.color = color;
     }
     setColor(color) {
@@ -14,6 +14,9 @@ export default class Cl_ropa extends Cl_articulo {
         }else{
             return 0;
         }
+    }
+    precioFinal(){
+        return this.precio - this.descuentoRojo();        
     }
     
 }

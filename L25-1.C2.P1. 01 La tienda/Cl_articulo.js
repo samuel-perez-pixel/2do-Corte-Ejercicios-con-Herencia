@@ -1,7 +1,14 @@
 export default class Cl_articulo {
-    constructor( nombre, precio) {
+    constructor( tipo,nombre, precio) {
+        this.tipo = tipo;
         this.nombre = nombre;
         this.precio = precio;
+    }
+    setTipo(tipo) {
+        this.tipo = tipo;
+    }
+    getTipo() {
+        return this.tipo;
     }
     setNombre(nombre) {
         this.nombre = nombre;
@@ -16,6 +23,6 @@ export default class Cl_articulo {
         return this.precio;
     }
     incremento(){
-        return 20/100;
+        return this.precio*(20/100);
     }
 }
