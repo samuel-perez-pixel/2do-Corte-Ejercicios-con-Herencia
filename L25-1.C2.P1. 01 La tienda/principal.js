@@ -9,4 +9,5 @@ export default class Cl_main{
          art4= new Cl_vivere(2,'Toddy',30,'No basico'),
          art5= new Cl_ropa(1,'Blusa',40,'rojo');
     }
+    
 }
