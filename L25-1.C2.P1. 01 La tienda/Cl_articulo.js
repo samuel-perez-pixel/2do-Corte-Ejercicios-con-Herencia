@@ -23,6 +23,6 @@ export default class Cl_articulo {
         return this.precio;
     }
     incremento(){
-        return this.precio*(20/100);
+        return this.precio * (20/100);
     }
 }

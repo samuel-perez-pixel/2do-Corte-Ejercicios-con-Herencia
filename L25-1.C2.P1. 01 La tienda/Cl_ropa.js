@@ -10,13 +10,13 @@ export default class Cl_ropa extends Cl_articulo {
     }
     descuentoRojo(){
         if(this.color == "rojo"){
-            return this.precio * 0.10;
+            return this.precio * (10/100);
         }else{
             return 0;
         }
     }
     precioFinal(){
-        return (this.precio*this.incremento()) - this.descuentoRojo();        
+        return (this.precio+this.incremento()) - this.descuentoRojo();        
     }
     
 }
