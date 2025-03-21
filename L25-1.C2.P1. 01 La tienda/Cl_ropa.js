@@ -6,10 +6,13 @@ export default class Cl_ropa extends Cl_articulo {
         this.color = color;
     }
     setColor(color) {
-        this.color = color;
+        this.color = +color;
+    }
+    getColor() {
+        return this.color;
     }
     descuentoRojo(){
-        if(this.color == "rojo"){
+        if(this.color == 3){
             return this.precio * (10/100);
         }else{
             return 0;

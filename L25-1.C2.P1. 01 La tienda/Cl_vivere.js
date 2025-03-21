@@ -10,14 +10,14 @@ export default class Cl_vivere extends Cl_articulo {
     getProducto() {
         return this.producto;
     }
-    descuentoBasico(){
+    gananciaBasico(){
         if(this.producto == "basico"){
             return this.precio *  (5/100);
-        }else if(this.producto == "No basico"){
+        }else {
             return this.incremento();   
         }
     }
     totalPagar(){
-        return (this.precio) + this.descuentoBasico();
+        return (this.precio) + this.gananciaBasico();
     }
 }
