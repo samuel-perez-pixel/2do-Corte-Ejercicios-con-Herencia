@@ -15,11 +15,11 @@ export default class Cl_mTienda{
             if (r.envase==2){ 
             this.cntFlorestotal++;
         }
-            if(r.getTipoFlores()=='n'){
+            if(r.getTipoFlores()=='N'){
                 this.cntFloreN++;
             }
         }
-        if(r.envase==2 && r.tipoFlores=='n'){
+        if(r.envase==2 && r.tipoFlores=='N'){
             this.cntFloresMed++;
         }
         else if(r instanceof Cl_mFrutas){

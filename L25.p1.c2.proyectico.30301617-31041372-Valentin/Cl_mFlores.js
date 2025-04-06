@@ -11,20 +11,20 @@ export default class Cl_mFlores extends Cl_mRamo{
         this.tipoFlores=t;
     }
     descuento(){
-        if(this.tipoFlores==='a')return this.costo*(10/100);
+        if(this.tipoFlores==='A')return this.costo*(10/100);
         else return 0; 
     }
     recargo(){
-        if(this.tipoFlores==='n'){return this.costo*(8/100);
+        if(this.tipoFlores==='N'){return this.costo*(8/100);
         }
         else return 0;
     }
     // metodo para calcular el total a pagar
     totalPagar(){
-        if(this.tipoFlores==='a'){
+        if(this.tipoFlores==='A'){
             return this.costo-this.descuento();
         }
-        else if(this.tipoFlores==='n'){
+        else if(this.tipoFlores==='N'){
             return this.costo+this.recargo();
         }
         else{

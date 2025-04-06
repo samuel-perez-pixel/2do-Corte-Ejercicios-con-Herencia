@@ -11,10 +11,10 @@ export default class Cl_mFrutas extends Cl_mRamo{
         this.extra=+e;
     }
     descuento(){
-        if(this.extra=='Si'){
+        if(this.extra=='SI'){
             return this.costo*(15/100);
         }
-        else if(this.extra=='No'){
+        else if(this.extra=='NO'){
             return 0};
     }
     totalPagar(){
