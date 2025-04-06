@@ -13,8 +13,8 @@ export default class Cl_mRamo{
     getCosto(){
         return this.costo;
     }
-    setCodigo(c){
-        this.codigo=+c;
+    setCodigo(C){
+        this.codigo=+C; // Se convierte a número
     }
     setEnvase(e){
         this.envase=+e;
