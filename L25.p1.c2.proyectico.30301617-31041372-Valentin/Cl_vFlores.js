@@ -7,7 +7,7 @@ export default class Cl_vFlores{
         this.btProcesar=document.getElementById("florform_btProcesar");
     }
     getCodigo(){
-        return +this.inCodigo.value;
+        return this.inCodigo.value;
     }
     getEnvase(){
         return +this.inEnvase.value;
@@ -16,6 +16,6 @@ export default class Cl_vFlores{
         return +this.inCosto.value;
     }
     getTipoFlores(){
-        return +this.inTipoFlores.value;
+        return this.inTipoFlores.value;
     }
 }

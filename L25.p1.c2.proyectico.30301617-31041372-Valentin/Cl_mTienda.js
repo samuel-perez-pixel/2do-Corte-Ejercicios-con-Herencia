@@ -3,13 +3,14 @@ import Cl_mFrutas from "./Cl_mFrutas.js";
 
 export default class Cl_mTienda{
     constructor(){
-        this.acumTotal=0;
+        this.acumTotalflor=0;
+        this.acumTotalfruta=0;
         this.cntFloreN=0;
         this.cntFloresMed=0;
         this.cntFlorestotal=0;
     }
     procesarRamo(r){
-        this.acumTotal+=r.totalPagar();
+        this.acumTotalflor+=r.totalPagar();
         if(r instanceof Cl_mFlores){
             this.cntFlorestotal++;
             if(r.getTipoFlores()=='n'){
@@ -21,10 +22,11 @@ export default class Cl_mTienda{
         }
         else if(r instanceof Cl_mFrutas){
             this.cntFrutas++;
+            this.acumTotalfruta+=r.totalPagar();
         }
     }
     totalPagado(){
-        return this.acumTotal;
+        return this.acumTotalflor+this.acumTotalfruta;
     }
     cantidadFloresN(){
         return this.cntFloreN;

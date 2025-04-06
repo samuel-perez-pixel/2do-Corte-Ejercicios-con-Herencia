@@ -1,6 +1,6 @@
 import Cl_mRamo from "./Cl_mRamo.js";
 export default class Cl_mFlores extends Cl_mRamo{
-    constructor(){({codigo,envase,costo,tipoFlores})
+    constructor({codigo,envase,costo,tipoFlores}){
         super(codigo,envase,costo);
         this.tipoFlores=tipoFlores;
     }
@@ -11,17 +11,20 @@ export default class Cl_mFlores extends Cl_mRamo{
         this.tipoFlores=t;
     }
     descuento(){
-        return this.costo*(10/100); 
+        if(this.tipoFlores==='a')return this.costo*(10/100);
+        else return 0; 
     }
     recargo(){
-        return this.costo*(8/100);
+        if(this.tipoFlores==='n'){return this.costo*(8/100);
+        }
+        else return 0;
     }
     // metodo para calcular el total a pagar
     totalPagar(){
-        if(this.tipoFlores=='n'){
+        if(this.tipoFlores==='a'){
             return this.costo-this.descuento();
         }
-        else if(this.tipoFlores=='a'){
+        else if(this.tipoFlores==='n'){
             return this.costo+this.recargo();
         }
         else{
