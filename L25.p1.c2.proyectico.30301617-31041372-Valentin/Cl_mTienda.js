@@ -10,14 +10,16 @@ export default class Cl_mTienda{
         this.cntFlorestotal=0;
     }
     procesarRamo(r){
-        this.acumTotalflor+=r.totalPagar();
         if(r instanceof Cl_mFlores){
+            this.acumTotalflor+=r.totalPagar();
+            if (r.envase==2){ 
             this.cntFlorestotal++;
+        }
             if(r.getTipoFlores()=='n'){
                 this.cntFloreN++;
             }
         }
-        if(this.envase==2){
+        if(r.envase==2 && r.tipoFlores=='n'){
             this.cntFloresMed++;
         }
         else if(r instanceof Cl_mFrutas){
@@ -34,9 +36,7 @@ export default class Cl_mTienda{
     cantidadFloresMed(){
         return this.cntFloresMed;
     }
-    porcFloresMed(){
-        if(this.tipoFlores=='n'&& this.envase==2){
+    porcFloresMed(){   
             return (this.cntFloresMed/this.cntFlorestotal)*100;
-        }
     }
 }
