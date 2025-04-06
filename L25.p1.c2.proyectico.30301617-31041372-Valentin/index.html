@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+
+<body>
+    <section>
+        <input type="text" id="florform_inCodigo" placeholder="codigo">
+        <input type="text" id="florform_inEnvase" placeholder="Tipo de Envase">
+        <input type="text" id="florform_inCosto" placeholder="costo base">
+        <input type="text" id="florform_inTipoFlores" placeholder="Tipo de Flores">
+        <button id="florform_btProcesar">Procesar Flores</button>
+    </section>
+
+    <section>
+        <input type="text" id="frutaForm_inCodigo" placeholder="codigo">
+        <input type="text" id="frutaForm_inEnvase" placeholder="Tipo de Envase">
+        <input type="text" id="frutaForm_inCosto" placeholder="costo base">
+        <input type="text" id="frutaForm_inExtra" placeholder="Extra?">
+        
+        <button id="frutaform_btProcesar">Procesar frutas</button>
+    </section>
+
+    <section>
+        <div id="salida">
+        </div><br>
+
+        <table id="tablaFlores">
+            <tr>
+                <th>codigo</th>
+                <th>Envase</th>
+                <th>costo base</th>
+                <th>Tipo de Flores</th>
+                <th>Descuento</th>
+                <th>Recargo</th>
+                <th>costo total</th>
+            </tr>
+        </table><br>
+
+        <table id="tablaFrutas">
+            <tr>
+                <th>codigo</th>
+                <th>Envase</th>
+                <th>costo base</th>
+                <th>Extra?</th>
+                <th>Descuento</th>
+                <th>costo total</th>
+            </tr>
+        </table><br>
+    </section>
+
+</body>
+<script type="module" >
+    import Cl_principal from "./Cl_principal.js";
+    new Cl_principal()
+</script>
+</html>
